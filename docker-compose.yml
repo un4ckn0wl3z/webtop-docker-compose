@@ -10,7 +10,7 @@ services:
       - PGID=1000
       - TZ=Asia/Bangkok
     volumes:
-      - ./config:/config
+      - './config:/config'
     ports:
       - 30099:3000
     # shm_size: "3gb" #optional
