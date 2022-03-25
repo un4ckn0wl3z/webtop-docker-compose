@@ -1,0 +1,17 @@
+---
+version: "2.1"
+services:
+  webtop:
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
+    container_name: webtop
+    privileged: true
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Bangkok
+    volumes:
+      - /root/webtop/config:/config
+    ports:
+      - 30099:3000
+    # shm_size: "3gb" #optional
+    restart: unless-stopped
